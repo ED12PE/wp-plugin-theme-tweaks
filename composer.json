@@ -1,0 +1,8 @@
+{
+  "name": "filipecsweb/wpss-theme-tweaks",
+  "autoload": {
+    "psr-4": {
+      "SsThemeTweaks\\App\\": "app/"
+    }
+  }
+}
