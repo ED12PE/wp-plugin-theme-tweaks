@@ -18,9 +18,12 @@ custom functionality to your site/theme.
     * `2048x2048`.
     * `medium_large`.
 2. Automagically update an image alt text with its parent title (during upload):
-    * For instance, if you upload an image through a page called Contact that image will have its alternative text updated to Contact.
+    * For instance, if you upload an image through a page called Contact that image will have its alternative text
+      updated to Contact.
 3. Improves the way WordPress sanitizes a file name:
-   * WordPress already does a good work sanitizing a file name. Additionally, this plugin converts all characters to lowercase and adds a suffix based on the date to the filename to prevent image caching. E.g. "Image.png" turns into "image6382612.png".7
+    * WordPress already does a good work sanitizing a file name. Additionally, this plugin converts all characters to
+      lowercase and adds a suffix based on the date to the filename to prevent image caching. E.g. "Image.png" turns
+      into "image6382612.png".
 
 ## License
 

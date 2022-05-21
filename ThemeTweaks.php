@@ -21,7 +21,7 @@ class ThemeTweaks
 
     protected function __construct()
     {
-        require 'vendor/autoload.php';
+        require __DIR__.'/vendor/autoload.php';
 
         new Hooks();
     }
