@@ -24,6 +24,7 @@ custom functionality to your site/theme.
     * WordPress already does a good work sanitizing a file name. Additionally, this plugin converts all characters to
       lowercase and adds a suffix based on the date to the filename to prevent image caching. E.g. "Image.png" turns
       into "image6382612.png".
+4. Makes WordPress library (when opened inside a post) display only the images attached to the current post being edited.
 
 ## License
 

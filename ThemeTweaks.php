@@ -3,7 +3,7 @@
 /**
  * Plugin Name:  SS - Theme Tweaks
  * Description:  Modifies native WordPress behavior focusing on better performance, security and long-term site management.
- * Version:      1.0.0
+ * Version:      1.0.1
  * Author:       Filipe Seabra
  * Author URI:   https://filipeseabra.me
  * License:      GPLv3

@@ -63,4 +63,22 @@ class Filters
 
         return $filename;
     }
+
+    /**
+     * Filters the arguments passed to WP_Query during an Ajax call for querying attachments.
+     *
+     * @param  array  $query  An array of query variables.
+     *
+     * @return  array
+     */
+    public static function ajax_query_attachments_args_callback(array $query): array
+    {
+        if (empty($_POST['post_id'])) {
+            return $query;
+        }
+
+        $query['post_parent__in'] = array($_POST['post_id']);
+
+        return $query;
+    }
 }
