@@ -8,6 +8,8 @@ class Hooks
 {
     public function __construct()
     {
+        add_action('after_setup_theme', ['\SsThemeTweaks\App\Actions', 'after_setup_theme_callback']);
+
         add_action('init', ['\SsThemeTweaks\App\Actions', 'init_callback']);
 
         add_action('add_attachment', ['\SsThemeTweaks\App\Actions', 'add_attachment_callback']);
@@ -35,5 +37,6 @@ class Hooks
             ['\SsThemeTweaks\App\Woocommerce\Filters', 'wc_get_image_size_thumbnail_callback']);
         add_filter('woocommerce_get_image_size_single',
             ['\SsThemeTweaks\App\Woocommerce\Filters', 'wc_get_image_size_single_callback']);
+        add_filter('woocommerce_prevent_admin_access', '__return_false', PHP_INT_MAX);
     }
 }

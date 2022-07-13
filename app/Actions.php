@@ -4,10 +4,17 @@ namespace SsThemeTweaks\App;
 
 class Actions
 {
-    public static function init_callback()
+    public static function after_setup_theme_callback(): void
+    {
+        add_post_type_support('page', 'excerpt');
+    }
+
+    public static function init_callback(): void
     {
         remove_image_size('1536x1536');
         remove_image_size('2048x2048');
+
+        unregister_taxonomy_for_object_type('post_tag', 'post');
     }
 
     /**
@@ -15,7 +22,7 @@ class Actions
      *
      * @param  int  $post_id  Attachment ID.
      */
-    public static function add_attachment_callback(int $post_id)
+    public static function add_attachment_callback(int $post_id): void
     {
         if ( ! wp_attachment_is_image($post_id)) {
             return;
