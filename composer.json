@@ -1,8 +1,14 @@
 {
-  "name": "filipecsweb/wpss-theme-tweaks",
+  "name": "ed12pe/wp-plugin-theme-tweaks",
   "autoload": {
     "psr-4": {
-      "SsThemeTweaks\\App\\": "app/"
+      "ThemeTweaks\\App\\": "app/"
     }
-  }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
