@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "git-reset-hard": "git init; git remote add origin git@github.com:filipecsweb/wpss-theme-tweaks.git; git fetch; git reset --hard origin/master; rm -rf .git;"
-  }
-}
