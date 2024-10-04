@@ -2,23 +2,7 @@
 
 namespace ThemeTweaks\App;
 
-/* 
-- Plugin Headers
-- Install Webpack?
-- Constants
-- Add exit if accessed directly
-- Main Class with plugin's name
-- Internationalization
-- Composer Autoload
- */
-
-
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) { exit; }
-
-// Plugin Constants
-define( 'TT_PLUGIN_VERSION', '1.0.0' );
-
+defined( 'ABSPATH' ) || exit;
 
 final class Main {
 	public ?Common\Tweaks\Tweaks $tweaks = null;

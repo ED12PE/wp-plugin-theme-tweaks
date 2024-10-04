@@ -4,7 +4,6 @@ namespace ThemeTweaks\App\Common\Tweaks;
 
 
 class Wc {
-
     public function __construct() {
         add_filter('woocommerce_enqueue_styles', '__return_false');
         add_filter('woocommerce_get_image_size_gallery_thumbnail', [ $this, 'wcGetImageSizeGalleryThumbnailCallback']);
@@ -36,5 +35,4 @@ class Wc {
             'crop'   => 0,
         ];
     }
-
 }
