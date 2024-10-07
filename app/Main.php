@@ -2,6 +2,8 @@
 
 namespace ThemeTweaks\App;
 
+defined( 'ABSPATH' ) || exit;
+
 final class Main {
 	public ?Common\Tweaks\Tweaks $tweaks = null;
 
