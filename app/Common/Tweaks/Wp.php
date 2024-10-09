@@ -2,6 +2,8 @@
 
 namespace ThemeTweaks\App\Common\Tweaks;
 
+defined( 'ABSPATH' ) || exit;
+
 class Wp {
 	public function __construct() {
 		add_action( 'after_setup_theme', [ $this, 'afterSetupThemeCallback' ] );

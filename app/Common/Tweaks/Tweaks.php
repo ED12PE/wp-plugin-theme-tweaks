@@ -2,6 +2,8 @@
 
 namespace ThemeTweaks\App\Common\Tweaks;
 
+defined( 'ABSPATH' ) || exit;
+
 class Tweaks {
 	public ?Wp $wp = null;
 	

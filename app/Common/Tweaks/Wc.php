@@ -2,6 +2,8 @@
 
 namespace ThemeTweaks\App\Common\Tweaks;
 
+defined( 'ABSPATH' ) || exit;
+
 class Wc {
     public function __construct() {
         add_filter('woocommerce_enqueue_styles', '__return_false');
