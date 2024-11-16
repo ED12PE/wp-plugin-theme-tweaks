@@ -1,24 +1,34 @@
 {
-  "main": "webpack.config.js",
+  "name": "theme-tweaks",
+  "private": true,
+  "browserslist": [
+    "extends @roots/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
   "scripts": {
-    "build-dev": "webpack --mode development --config webpack.config.js",
-    "build-prod": "webpack --mode production --config webpack.config.js",
-    "watch": "webpack --watch --progress --mode development --config webpack.config.js"
+    "dev": "bud dev",
+    "build": "bud build",
+    "translate": "npm run translate:pot && npm run translate:update",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"theme.json,patterns,app,resources\"",
+    "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
+    "translate:compile": "npm run translate:mo && npm run translate:js",
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang"
   },
   "devDependencies": {
-    "@babel/core": "~7.8.3",
-    "@babel/preset-env": "~7.8.3",
-    "babel-loader": "~8.0.6",
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.0",
-    "mini-css-extract-plugin": "^2.9.1",
-    "postcss-loader": "^8.1.1",
-    "sass": "^1.79.3",
-    "sass-loader": "^16.0.2",
-    "url-loader": "~4.1.1",
-    "vue": "^3.5.8",
-    "vue-loader": "^17.4.2",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
+    "@roots/bud": "^6.23.3",
+    "@roots/bud-sass": "^6.23.3",
+    "@roots/bud-stylelint": "^6.23.3",
+    "@roots/bud-tailwindcss": "^6.23.3",
+    "@roots/bud-vue": "^6.23.3",
+    "@roots/sage": "^6.23.3",
+    "@varlet/ui": "^3.6.5",
+    "superagent": "^10.1.1"
+  },
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001680"
   }
 }

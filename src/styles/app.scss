@@ -1,0 +1,17 @@
+.route-fade-enter-active,
+.route-fade-leave-active {
+    transition: all 0.2s;
+}
+
+.route-fade-enter-from,
+.route-fade-leave-active {
+    opacity: 0;
+}
+
+.route-fade-enter-from {
+    transform: translateX(30px);
+}
+
+.route-fade-leave-active {
+    transform: translateX(-30px);
+}

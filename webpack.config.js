@@ -102,6 +102,6 @@ module.exports = (env, options) => {
         plugins: plugins,
         watchOptions: {
             ignored: /node_modules/
-        }
+        },
     };
 };
