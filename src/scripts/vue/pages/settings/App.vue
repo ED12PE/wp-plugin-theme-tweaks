@@ -12,6 +12,16 @@
           ]"
           :modelValue="'no'"
       />
+
+      <h3>Remove WordPress useless image sizes?</h3>
+
+      <base-select
+          :options="[
+            { label: 'Yes', value: 'yes' },
+            { label: 'No', value: 'no' }
+          ]"
+          :modelValue="'no'"
+      />
     </div>
 
     <base-button
