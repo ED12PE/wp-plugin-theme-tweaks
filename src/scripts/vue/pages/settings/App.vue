@@ -33,23 +33,19 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-import superagent from 'superagent'
+import { ref } from "vue";
+import superagent from "superagent";
 
-import BaseButton from '@scripts/vue/components/common/base/Button'
-import BaseSelect from '@scripts/vue/components/common/base/Select'
+import BaseButton from "@scripts/vue/components/common/base/Button";
+import BaseSelect from "@scripts/vue/components/common/base/Select";
 
 const initSave = () => {
-  superagent
-      .get('http://localhost.wordpressplugins/wp-json/wp/v2/posts')
-      .then(res => res.body)
-      .then(data => {
-        console.log(data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-}
+	superagent
+		.post("http://1-better.local/wp-json/theme-tweaks/v1/options")
+		.catch((err) => {
+			console.log(err);
+		});
+};
 </script>
 
 <style lang="scss" scoped>
