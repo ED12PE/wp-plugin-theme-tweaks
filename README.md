@@ -7,7 +7,7 @@ custom functionality to your site/theme.
 
 * [PHP](https://secure.php.net/manual/en/install.php) >= 7.4.0.
 
-## Plugin installation
+## Plugin Installation
 
 * Install it like you'd do with any other WordPress plugin.
 
