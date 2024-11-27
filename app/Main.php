@@ -11,6 +11,8 @@ final class Main {
 
 	public ?Common\Utils\Utils $utils = null;
 
+	public ?Common\Api\Api $api = null;
+
 	public function __construct() {
 		$this->init();
 	}
@@ -23,5 +25,6 @@ final class Main {
 		$this->utils  = new Common\Utils\Utils();
 		$this->admin  = new Common\Admin\Admin();
 		$this->tweaks = new Common\Tweaks\Tweaks();
+		$this->api    = new Common\Api\Api();
 	}
 }
