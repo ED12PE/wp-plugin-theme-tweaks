@@ -17,6 +17,7 @@ class Wc {
         add_filter( 'woocommerce_get_image_size_gallery_thumbnail', [ $this, 'wcGetImageSizeGalleryThumbnailCallback' ] );
         add_filter( 'woocommerce_get_image_size_thumbnail', [ $this, 'wcGetImageSizeThumbnailCallback' ] );
         add_filter( 'woocommerce_get_image_size_single', [ $this, 'wcGetImageSizeSingleCallback' ] );
+        add_filter( 'woocommerce_taxonomy_args_product_cat', [ $this, 'wcTaxArgsProductCat' ] );
         add_filter( 'woocommerce_prevent_admin_access', '__return_false', PHP_INT_MAX);
     }
 
@@ -69,5 +70,21 @@ class Wc {
             'height' => get_option( 'large_size_h' ),
             'crop'   => 0,
         ];
+    }
+
+	/**
+	 * Hooked into `woocommerce_taxonomy_args_product_cat` filter hook.
+	 *
+	 * @param  array $args
+	 * @return array
+	 */
+    public function wcTaxArgsProductCat( $args ): array {
+	    return array_merge(
+		    $args,
+		    array(
+			    // As we are using ACF to set the category we hide the meta box for organization purposes.
+			    'meta_box_cb' => false,
+		    )
+	    );
     }
 }
